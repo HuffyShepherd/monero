@@ -512,9 +512,9 @@ Then you can run make as usual.
 
 ```bash
 # Build image (for ARM 32-bit)
-docker build -f utils/build_scripts/android32.Dockerfile -t monero-android .
+docker build --build-arg TARGET=arm-linux-android -t monero-android .
 # Build image (for ARM 64-bit)
-docker build -f utils/build_scripts/android64.Dockerfile -t monero-android .
+docker build --build-arg TARGET=aarch64-linux-android -t monero-android .
 # Create container
 docker create -it --name monero-android monero-android bash
 # Get binaries
